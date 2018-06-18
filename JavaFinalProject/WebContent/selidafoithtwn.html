@@ -1,0 +1,19 @@
+<html>
+<head>
+<meta charset="UTF-8" http-equiv="Content-Type" name="viewport" content="text/html, width=device-width, initial-scale=1">
+ <link rel="stylesheet"type="text/css"href="new 1.css"> 
+
+ </head>
+<body class="pic3">
+<center><img src="Universitywestattica.jpg" >
+<p>Καλωσορισατε στις υπηρεσιες μαθητη του πανεπιστημιου</p>
+<h3>Παρακαλω επιλεξτε μια απο τις παρακατω λειτουργιες</h3>
+
+ <input type="button" onclick="window.location.href='epilogimathimatos.html'"  value="Προβολη βαθμολογίας ανα μάθημα" class="button" >
+  <input type="button" onclick="window.location.href='epilogiexaminou.html'"  value="Προβολή βαθμολογίας ανα εξάμηνο" class="button" >
+ 	<form method="post" action="StudentsServlet">
+<button type="submit" name="requestType" value="viewtotal">Προβολη συνολικης βαθμολογίας για ολα τα ηδη εξεταζόμενα μαθήματα</button>
+</form>
+ <p align="right"><a href="logoutservlet">Αποσύνδεση Χρήστη</a></p>
+	</body>
+	</html>

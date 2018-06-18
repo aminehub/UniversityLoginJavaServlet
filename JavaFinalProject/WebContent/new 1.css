@@ -1,0 +1,52 @@
+ a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;color: Black;font-family:system-ui;
+}
+h4 {
+   font-size:18pt;text-align:center;color:Gold;font-family:cursive;
+}
+
+
+body
+{
+  margin-top: 3px;
+  margin-left: 2px;
+  margin-right: 2px;
+  background-image:url("blue_background_abstract.jpg");
+}
+
+p{
+	font-size:13pt;color:White;font-family:cursive;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+	padding: 10px 50px;
+    
+}
+
+table
+	{
+	width:100%;height:10%;
+	}
+th {
+    height: 50px;padding:10px;font-size:15pt;font-family:cursive;
+ }
+ .pic
+ {
+	  background-image:url("wppppp.jpg");
+ }
+.pic2{
+	 background-image:url("658188.jpg");
+}
+.pic3{
+	background-image:url("5841760-green-hd-wallpaper.jpg");
+}
+.pic4{
+	background-image:url("red-yellow-background-637.jpg");
+}

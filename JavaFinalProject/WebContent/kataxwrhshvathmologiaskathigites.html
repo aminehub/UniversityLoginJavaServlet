@@ -1,0 +1,66 @@
+<html>
+<head>
+ <meta charset="utf-8">
+ <link rel="stylesheet"type="text/css"href="new 1.css"> 
+ </head>
+<body>
+<p>Καταχώρηση Βαθμολογίας</p>
+<form  autocomplete="off" method="post" action="ProfessorsServlet" onsubmit=" return CheckStoixeia();" >
+<input type="hidden" name="requestType" value="submitgrades" />
+<fieldset>
+
+ <div class="container"> 
+    <label><strong> ΙD Μαθήματος</strong></label><br>
+    <input id="course" class="input" type="text"  name="course"><br>
+	<label><strong>Βαθμός</strong></label><br>
+    <input id="grade" class="input" type="text"  name="grade"><br>
+	<label><strong>Κωδικός μαθητή</strong></label><br>
+    <input id="id_stud" class="input" type="text"  name="id_stud"><br>	
+    <label><strong>Εξάμηνο</strong></label><br>
+    <input id="examino" class="input" type="text"  name="examino"><br>	
+	<br>
+	 <input id='btn' type="submit" value="Καταχώρηση" name="kataxwrhsh" class="button " >
+	 <input type="reset" value="Καθαρισμός πεδίων"class="button"/><br>
+	  <input type="button" onclick="window.history.go(-1); return false;"  value="Επιστροφή " class="button" >
+   <input type="button" onclick="window.location.href='selidakathigitwn.html'"  value="Επιστροφή στην αρχική σελίδα" class="button" >
+	</div>
+	
+	</form>
+	</fieldset>
+	<script>
+function CheckStoixeia()
+{
+ var course=document.getElementById("course").value;
+ var grade=document.getElementById("grade").value;
+ var id_stud=document.getElementById("id_stud").value;
+  
+  
+	
+  
+if(course=="") {
+
+alert("Παρακαλώ συμπληρώστε μαθημα!") ;
+return false;
+
+} 
+if(grade==""){
+
+alert("Παρακαλώ συμπληρώστε βαθμό!");
+return false;
+
+}
+if(id_stud==""){
+
+alert("Παρακαλώ συμπληρώστε κωδικό μαθητή!");
+return false;
+
+}
+   
+}
+
+
+
+   
+</script>
+	</body>
+	</html>

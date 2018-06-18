@@ -1,0 +1,59 @@
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet"type="text/css"href="new 1.css"> 
+ </head>
+<body>
+<p>Ανάθεση μαθήματος σε καθηγητή</p>
+<form autocomplete="off" method="post" action="SecretariesServlet" onsubmit=" return CheckStoixeia();" >
+<input type="hidden" name="requestType" value="anathesi" />
+<fieldset>
+
+ <div class="container">   
+    <label><strong>Κωδικός Καθηγητή</strong></label><br>
+    <input id="code" class="input" type="text"  name="code"required><br>
+	<label><strong>ID Μαθήματος</strong></label><br>
+    <input id="course" class="input" type="text"  name="course"required><br>
+		
+	<br>
+	 <input id='btn' type="submit" value="Ανάθεση" name="anathesi" class="button" >
+	 <input type="reset" value="Καθαρισμός πεδίων"class="button"/><br>
+	  <input type="button" onclick="window.history.go(-1); return false;"  value="Επιστροφή " class="button" >
+   <input type="button" onclick="window.location.href='selidagrammateias.html'"  value="Επιστροφή στην αρχική σελίδα" class="button" >
+
+	</div>
+	
+	</form>
+	</fieldset>
+	<script>
+function CheckStoixeia()
+{
+ var code=document.getElementById("code").value;
+ var course=document.getElementById("course").value;
+ 
+  
+  
+	
+  
+if( code=="") {
+
+alert("Παρακαλώ συμπληρώστε κωδικό καθηγητή!") ;
+return false;
+
+} 
+if(course==""){
+
+alert("Παρακαλώ συμπληρώστε μάθημα!");
+return false;
+
+}
+  
+   
+}
+
+
+
+   
+</script>
+	</body>
+	</html>

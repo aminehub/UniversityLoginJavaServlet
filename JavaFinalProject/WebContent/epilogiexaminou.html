@@ -1,0 +1,51 @@
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet"type="text/css"href="new 1.css"> 
+ </head>
+<body>
+<p>Παρακαλω πληκτρολογειστε το εξάμηνο του οποίου επιθυμείτε να δειτε την βαθμολογια σας</p>
+<form autocomplete="off" method="post" action="StudentsServlet" onsubmit=" return CheckStoixeia();" >
+<input type="hidden" name="requestType" value="viewsem" />
+<fieldset>
+ <div class="container">   
+    <label><strong>Εξάμηνο</strong></label><br>
+    <input id="sem" class="input" type="text"  name="sem"><br>
+		
+	<br>
+	 <input id='btn' type="submit" value="Αναζήτηση" name="anazitisi" class="button" >
+	 <input type="reset" value="Καθαρισμός πεδίων"class="button"/><br>
+	  <input type="button" onclick="window.history.go(-1); return false;"  value="Επιστροφή" class="button" >
+   <input type="button" onclick="window.location.href='selidafoithtwn.html'"  value="Επιστροφή στην αρχική σελίδα" class="button" >
+
+	</div>
+	
+	</form>
+	</fieldset>
+	<script>
+function CheckStoixeia()
+{
+ var lesson=document.getElementById("lesson").value;
+  
+  
+	
+  
+if( lesson=="") {
+
+alert("Παρακαλώ συμπληρώστε id μαθηματος ;
+return false;
+
+} 
+if (lesson < 1 || lesson > 10)
+
+alert("Παρακαλώ δώστε τιμές για το εξάμηνο από 1 εώς 10!")
+  return false;
+   
+}
+
+
+
+   
+</script>
+	</body>
+	</html>

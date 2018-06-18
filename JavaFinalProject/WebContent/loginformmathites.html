@@ -1,0 +1,70 @@
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet"type="text/css"href="new 1.css"> 
+
+ </head>
+<body>
+<center><img src="Universitywestattica.jpg" >
+<h4>ΠΑΝΕΠΙΣΤΗΜΙΟ ΔΥΤΙΚΗΣ ΑΤΤΙΚΗΣ <br>www.uniditattikis.gr<br>Υπηρεσία Πληροφόρησης Φοιτητών</h4></center>
+<form autocomplete="off" method="post" action="StudentsServlet" onsubmit=" return CheckStoixeia();">
+<input type="hidden" name="requestType" value="loginstud">
+ <strong><p><center>Είσοδος Φοιτητή</center></p><strong>
+<em><center>Εισάγετε όνομα χρήστη και κωδικό για να αποκτήσετε πρόσβαση στο σύστημα και να δείτε προσωπικές<br> πληροφορίες για το πρόγραμμα σπουδών, διδασκαλίας, εξετάσεων, καθώς επίσης και να αποστείλετε αιτήσεις<br> προς τη Γραμματεία του τμήματός σας, να δείτε την συνολική σας βαθμολογία και όλες τις εγγραφές σας στα εξάμηνα.</center></em>
+<br>
+		 <fieldset><center><img src="student-icon-53587.png" alt="left"></center>
+			<center>
+			<table>
+			
+			<td>
+				<tr><strong><p><label for="username">username</label>
+					<input id="username" type="text" name="username" required></p></strong>
+				</tr>
+			</td>
+			<td>
+				<tr>
+					<strong><p><label for="password">password:</label>
+					<input id="password" name="password" type="password" required> ></p>
+					</strong>
+				</tr>
+			</td>
+			 
+	 <input id="btn"  value="Είσοδος στην εφαρμογή" class="button" type="submit" ><br>
+	 <input type="reset" value="Καθαρισμός πεδίων"class="button"/><br>
+     <input type="button" onclick="window.location.href='index.html'"  value="Επιστροφή στην αρχική σελίδα" class="button" >
+		 </fieldset> 
+ </table>
+ </center>
+ <script>
+ 
+function CheckStoixeia()
+{
+  var username=document.getElementById("username").value;
+  var password=document.getElementById("password").value;
+  
+
+
+if(username=="")
+{
+
+alert("Παρακαλω συμπληρωστε username!");
+return false;
+ 
+  }
+  
+if(password=="")
+{
+
+alert("Παρακαλω συμπληρωστε password!");
+ return false;
+  }
+  
+   
+}
+
+
+
+   
+</script>
+	</body>
+	</html>

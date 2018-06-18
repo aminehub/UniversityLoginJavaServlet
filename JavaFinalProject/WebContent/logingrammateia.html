@@ -1,0 +1,70 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet"type="text/css"href="new 1.css"> 
+ </head>
+<body>
+<center><img src="Universitywestattica.jpg" >
+<h4>ΠΑΝΕΠΙΣΤΗΜΙΟ ΔΥΤΙΚΗΣ ΑΤΤΙΚΗΣ <br>www.uniditattikis.gr<br>Υπηρεσία Γραμματείας</h4></center>
+<form autocomplete="off" method="post" action="SecretariesServlet" onsubmit=" return CheckStoixeia();">
+<input type="hidden" name="requestType" value="loginsecr">
+<strong><p><center>Είσοδος Γραμματέα</center></p><strong>
+<em><center>Εισάγετε όνομα χρήστη και κωδικό για να αποκτήσετε πρόσβαση στο σύστημα για να προβαλλετε <br>μαθημάτα (τίτλος μαθήματος, εξάμηνο, υπεύθυνος Καθηγητής),καθως και για αναθεση μαθήματος σε καθηγητή<br></center></em>
+<br>
+
+		 <fieldset><center><img src="woman-typing-office-computer-250x250.jpg" alt="left"></center>
+			<center>
+			<table>
+			
+			<td>
+				<tr><strong><p><label for="username">username</label>
+					<input id="username" type="text" name="username" required></p></strong>
+				</tr>
+			</td>
+			<td>
+				<tr>
+					<strong><p><label for="password">password:</label>
+					<input id="password" name="password" type="password" required> ></p>
+					</strong>
+				</tr>
+			</td>
+			 
+	 <input id="btn" value="Είσοδος στην εφαρμογή" class="button" type="submit" ><br>
+	 <input type="reset" value="Καθαρισμός πεδίων"class="button"/><br>
+    <input type="button" onclick="window.location.href='index.html'"  value="Επιστροφή στην αρχική σελίδα" class="button" >
+		 </fieldset> 
+ </table>
+ </center>
+ <script>
+ 
+function CheckStoixeia()
+{
+  var username=document.getElementById("username").value;
+  var password=document.getElementById("password").value;
+  
+
+
+if(username=="")
+{
+
+alert("Παρακαλω συμπληρωστε username!");
+return false;
+ 
+  }
+  
+if(password=="")
+{
+
+alert("Παρακαλω συμπληρωστε password!");
+ return false;
+  }
+  
+   
+}
+
+
+
+   
+</script>
+	</body>
+	</html>

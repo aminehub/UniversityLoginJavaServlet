@@ -1,0 +1,152 @@
+ <html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link rel="stylesheet"type="text/css"href="new 1.css"> 
+ </head>
+<body>
+<p>Εγγραφή νέου μαθητή</p>
+<form  autocomplete="off" method="post" action="SecretariesServlet" onsubmit=" return CheckStoixeia();" >
+<input type="hidden" name="requestType" value="insertstud">
+<fieldset>
+
+ <div class="container">   
+    <label><strong>Όνομα</strong></label><br>
+    <input id="name" class="input" type="text"  name="name" required><br>
+	<label><strong>Επώνυμο</strong></label><br>
+    <input id="surname"class="input" type="text"  name="surname" required><br>
+	 <label><strong>Τμήμα</strong></label><br>
+    <input id="department" class="input" type="text"  name="department" required><br>
+    <label><strong>Username</strong></label><br>
+    <input id="username" class="input" type="text"  name="username"  required><br>
+    <label><strong>Password</strong></label><br>
+    <input id="password" class="input" type="password"  name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"required><br>
+	
+	<br>
+	 <input id='btn' type="submit" value="Εγγραφή" name="eggrafi" class="button" >
+	 <input type="reset" value="Καθαρισμός πεδίων"class="button"/><br>
+	  <input type="button" onclick="window.history.go(-1); return false;"  value="Επιστροφή" class="button" >
+   <input type="button" onclick="window.location.href='selidagrammateias.html'"  value="Επιστροφή στην αρχική σελίδα" class="button" >
+
+	</div>
+	
+	</form>
+	</fieldset>
+	<div id="message">
+  <h3>Password must contain the following:</h3>
+  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+  <p id="number" class="invalid">A <b>number</b></p>
+  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+</div>
+	<script>
+	var myInput = document.getElementById("password");
+	 var letter = document.getElementById("letter");
+	 var capital = document.getElementById("capital");
+	 var number = document.getElementById("number");
+	 var length = document.getElementById("length");
+
+	 // When the user clicks on the password field, show the message box
+	 myInput.onfocus = function() {
+	   document.getElementById("message").style.display = "block";
+	 }
+
+	 // When the user clicks outside of the password field, hide the message box
+	 myInput.onblur = function() {
+	   document.getElementById("message").style.display = "none";
+	 }
+
+	 // When the user starts to type something inside the password field
+	 myInput.onkeyup = function() {
+	   // Validate lowercase letters
+	   var lowerCaseLetters = /[a-z]/g;
+	   if(myInput.value.match(lowerCaseLetters)) { 
+	     letter.classList.remove("invalid");
+	     letter.classList.add("valid");
+	   } else {
+	     letter.classList.remove("valid");
+	     letter.classList.add("invalid");
+	 }
+
+	   // Validate capital letters
+	   var upperCaseLetters = /[A-Z]/g;
+	   if(myInput.value.match(upperCaseLetters)) { 
+	     capital.classList.remove("invalid");
+	     capital.classList.add("valid");
+	   } else {
+	     capital.classList.remove("valid");
+	     capital.classList.add("invalid");
+	   }
+
+	   // Validate numbers
+	   var numbers = /[0-9]/g;
+	   if(myInput.value.match(numbers)) { 
+	     number.classList.remove("invalid");
+	     number.classList.add("valid");
+	   } else {
+	     number.classList.remove("valid");
+	     number.classList.add("invalid");
+	   }
+
+	   // Validate length
+	   if(myInput.value.length >= 8) {
+	     length.classList.remove("invalid");
+	     length.classList.add("valid");
+	   } else {
+	     length.classList.remove("valid");
+	     length.classList.add("invalid");
+	   }
+	 }
+function CheckStoixeia()
+{
+ var name=document.getElementById("name").value;
+ var surname=document.getElementById("surname").value;
+  var department=document.getElementById("department").value;
+ var username=document.getElementById("username").value;
+  var password=document.getElementById("password").value;
+  
+  
+	
+  
+if( name=="") {
+
+alert("Παρακαλώ συμπληρώστε όνομα!") ;
+return false;
+
+} 
+if(surname==""){
+
+alert("Παρακαλώ συμπληρώστε επώνυμο!");
+return false;
+
+}
+if(department==""){
+
+alert("Παρακαλω συμπληρωστε τμημα!") ;
+return false;
+}
+
+
+if(username=="")
+{
+
+alert("Παρακαλω συμπληρωστε username!");
+return false;
+ 
+  }
+  
+if(password=="")
+{
+
+alert("Παρακαλω συμπληρωστε password!");
+ return false;
+  }
+  
+   
+}
+
+
+
+   
+</script>
+	</body>
+	</html>
